@@ -4,14 +4,26 @@ const STORAGE_KEY = 'efficiency_tools';
 function getLocalTools() {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    return data ? JSON.parse(data) : null;
   } catch {
-    return [];
+    return null;
   }
 }
 
 function saveLocalTools(tools) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tools));
+}
+
+async function loadSeedData() {
+  try {
+    const res = await fetch('/db.json');
+    if (!res.ok) throw new Error('No seed file');
+    const data = await res.json();
+    saveLocalTools(data);
+    return data;
+  } catch {
+    return [];
+  }
 }
 
 export async function fetchTools() {
@@ -20,12 +32,13 @@ export async function fetchTools() {
     if (!res.ok) throw new Error('Server error');
     return res.json();
   } catch {
-    return getLocalTools();
+    const local = getLocalTools();
+    if (local) return local;
+    return loadSeedData();
   }
 }
 
 export async function createTool(tool) {
-  const newTool = { ...tool, id: Date.now() };
   try {
     const res = await fetch(API_URL, {
       method: 'POST',
@@ -35,9 +48,9 @@ export async function createTool(tool) {
     if (!res.ok) throw new Error('Server error');
     return res.json();
   } catch {
-    const tools = getLocalTools();
+    const tools = getLocalTools() || [];
     const maxId = tools.length > 0 ? Math.max(...tools.map((t) => t.id)) : 0;
-    newTool.id = maxId + 1;
+    const newTool = { ...tool, id: maxId + 1 };
     tools.push(newTool);
     saveLocalTools(tools);
     return newTool;
@@ -54,7 +67,7 @@ export async function updateTool(tool) {
     if (!res.ok) throw new Error('Server error');
     return res.json();
   } catch {
-    const tools = getLocalTools().map((t) => (t.id === tool.id ? tool : t));
+    const tools = (getLocalTools() || []).map((t) => (t.id === tool.id ? tool : t));
     saveLocalTools(tools);
     return tool;
   }
@@ -65,7 +78,7 @@ export async function deleteTool(id) {
     const res = await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
     if (!res.ok) throw new Error('Server error');
   } catch {
-    const tools = getLocalTools().filter((t) => t.id !== id);
+    const tools = (getLocalTools() || []).filter((t) => t.id !== id);
     saveLocalTools(tools);
   }
 }

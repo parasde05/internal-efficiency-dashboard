@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "name": "AmberOcean",
+    "description": "An AI-powered natural language SQL analytics portal for Amazon Redshift, built using ChromaDB RAG and Groq AI.",
+    "link": "https://ocean.staging-amber.com/",
+    "liveDateSince": "",
+    "createdBy": "Data Team",
+    "department": "Organization"
+  },
+  {
+    "id": 2,
+    "name": "Amber Radar",
+    "description": "A Next.js dashboard that provides real-time pricing, demand, and supply intelligence for the UK student accommodation market. Data is sourced from Amazon Redshift and visualised using Chart.js.",
+    "link": "https://radar.staging-amber.com/",
+    "liveDateSince": "",
+    "createdBy": "Data Team",
+    "department": ""
+  },
+  {
+    "id": 3,
+    "name": "Amber Prism",
+    "description": "Web app that renders a single Amber lead's complete cross-channel conversation timeline — calls, WhatsApp, email, and lead transitions.",
+    "link": "https://prism.staging-amber.com/",
+    "liveDateSince": "",
+    "createdBy": "Data Team (Mayank)",
+    "department": "Operations"
+  },
+  {
+    "id": 4,
+    "name": "amber-resume-screener",
+    "description": "This AI tool helps simplify and speed up the hiring process by taking care of resume screening and shortlisting. It works by pulling candidate resumes and data directly from LinkedIn Recruiter using automation, and compiling everything into an Excel file. This data is then uploaded into the AI tool, which reviews each profile against the job requirements and assigns a fit score. You get a ranked list of candidates along with clear summaries and insights on each profile. These reports are then added to Keka as notes under each candidate, making it easier for the team to review, collaborate, and make quicker hiring decisions.",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Aditi Singh",
+    "department": "HR Department"
+  },
+  {
+    "id": 5,
+    "name": "QA Analytics",
+    "description": "Dashboard representing automation testing coverage.",
+    "link": "https://qa-analytics.staging-amber.com",
+    "liveDateSince": "",
+    "createdBy": "Dipak Korde",
+    "department": "Engineering"
+  },
+  {
+    "id": 6,
+    "name": "Pulse",
+    "description": "Team Efficiency dashboard. Pulse is an internal engineering productivity dashboard for Amber. It tracks delivery, code activity, AI credit usage (Kiro), and team flow metrics by pulling data from Jira, GitHub, Kiro, and Notion.",
+    "link": "https://pulse.staging-amber.com/pods",
+    "liveDateSince": "",
+    "createdBy": "Dinesh Jain",
+    "department": "Engineering"
+  },
+  {
+    "id": 7,
+    "name": "CN Geo Tracker",
+    "description": "LLMrefs-style Generative Engine Optimization (GEO) tracker for Chinese LLMs — tracks whether amber (amberstudent.cn) gets mentioned, ranked, and cited when Chinese AI chatbots answer student-housing questions, and benchmarks against competitors.",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "",
+    "department": "SEO"
+  },
+  {
+    "id": 8,
+    "name": "China SEO Audit",
+    "description": "A crawlability & indexability auditor built for mainland China. Audits the mechanics that decide whether a site ranks inside China: Baidu / Sogou / 360 / Shenma spiders, Great-Firewall-blocked resources, ICP filing, weak JS rendering, and Chinese-language meta rules.",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "",
+    "department": "SEO"
+  },
+  {
+    "id": 9,
+    "name": "Casa — Amber's Design System",
+    "description": "Casa provides components, tokens, and patterns to help product teams build cohesive interfaces for Amber Student — faster, and without re-deciding the basics every sprint.",
+    "link": "https://amber-design-system.vercel.app/",
+    "liveDateSince": "",
+    "createdBy": "Shahi",
+    "department": "Product Design"
+  },
+  {
+    "id": 10,
+    "name": "Amber Payroll",
+    "description": "A web application for reconciling data between Excel sheets. Users can upload Keka Pay Register files and other Excel files (Consultant, Salary, Intern, etc.) and compare data between sheets using exact matching. Features • Upload multiple Excel files (Keka Pay Register or other Excel files) • Select sheets from uploaded files • Select columns from dropdown menus • Optional column value filtering • Exact matching reconciliation • Tabbed results showing: Matches: Records where column values match between both sheets Non-Matches: Records that exist in one sheet but not the other",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Aditi Singh",
+    "department": "HR Department"
+  },
+  {
+    "name": "Amber expense tracker",
+    "description": "The expense tracker tool  lets you upload a receipt or invoice (photo or PDF), and the tool automatically reads the document and extracts all the relevant details like vendor name, amount, date, expense type, and who the expense was for. You review the extracted data, make any corrections, and save it directly to the shared Google Sheet. The original receipt is also uploaded to Drive and linked from the sheet, so everything stays in one place. This should cut down the time spent on manual data entry significantly. What used to take 15-20 minutes per entry (reading the receipt, typing into the sheet, filing the document) now takes under a minute.",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Aditi Singh",
+    "department": "HR Department",
+    "id": 11
+  },
+  {
+    "name": "Amber Studio",
+    "description": "Short Form video content automation",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Aditi Singh",
+    "department": "Marketing Team",
+    "id": 12
+  },
+  {
+    "name": "LMS",
+    "description": "training & learning portal for human agents",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 13
+  },
+  {
+    "name": "Agent Auditing ",
+    "description": "Audit agent performance ",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 14
+  },
+  {
+    "name": "Offline forms Bookform Automation ",
+    "description": "fills the form edits and can be downloaded in pdf format",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit",
+    "department": "Operations",
+    "id": 15
+  },
+  {
+    "name": "Online Bookform Automation",
+    "description": "captures the action through screen recording and copy thos e actions again",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit ",
+    "department": "Operations",
+    "id": 16
+  },
+  {
+    "name": "Amber monitor",
+    "description": "Analyzes Invetory descripancies based on Uhome",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 17
+  }
+]
