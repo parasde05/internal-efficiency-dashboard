@@ -106,5 +106,50 @@
     "createdBy": "Aditi Singh",
     "department": "Marketing Team",
     "id": 12
+  },
+  {
+    "name": "LMS",
+    "description": "training & learning portal for human agents",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 13
+  },
+  {
+    "name": "Agent Auditing ",
+    "description": "Audit agent performance ",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 14
+  },
+  {
+    "name": "Offline forms Bookform Automation ",
+    "description": "fills the form edits and can be downloaded in pdf format",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit",
+    "department": "Operations",
+    "id": 15
+  },
+  {
+    "name": "Online Bookform Automation",
+    "description": "captures the action through screen recording and copy thos e actions again",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit ",
+    "department": "Operations",
+    "id": 16
+  },
+  {
+    "name": "Amber monitor",
+    "description": "Analyzes Invetory descripancies based on Uhome",
+    "link": "",
+    "liveDateSince": "",
+    "createdBy": "Arpit Ojha",
+    "department": "Operations",
+    "id": 17
   }
 ]

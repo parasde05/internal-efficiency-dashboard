@@ -3,14 +3,9 @@ import { Button, ToggleSwitch, Tabs } from '@shashpicious/casa';
 import ToolCard from './components/ToolCard';
 import ToolTable from './components/ToolTable';
 import ToolForm from './components/ToolForm';
-import Login from './components/Login';
 import { fetchTools, createTool, updateTool, deleteTool } from './api';
 
 export default function App() {
-  const [user, setUser] = useState(() => {
-    const saved = localStorage.getItem('user');
-    return saved ? JSON.parse(saved) : null;
-  });
   const [tools, setTools] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingTool, setEditingTool] = useState(null);
@@ -87,6 +82,8 @@ export default function App() {
     setEditingTool(null);
   };
 
+  const isAdmin = true;
+
   const tabItems = [
     {
       key: 'grid',
@@ -97,8 +94,8 @@ export default function App() {
             <ToolCard
               key={tool.id}
               tool={tool}
-              onEdit={isAdmin ? handleEdit : null}
-              onDelete={isAdmin ? handleDelete : null}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
             />
           ))}
         </div>
@@ -108,33 +105,16 @@ export default function App() {
       key: 'table',
       label: '☰ Table',
       content: (
-        <ToolTable tools={filteredTools} onEdit={isAdmin ? handleEdit : null} onDelete={isAdmin ? handleDelete : null} />
+        <ToolTable tools={filteredTools} onEdit={handleEdit} onDelete={handleDelete} />
       ),
     },
   ];
-
-  const ADMIN_EMAIL = 'paras.de@amberstudent.com';
-  const isAdmin = user?.email === ADMIN_EMAIL;
-
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    setUser(null);
-  };
-
-  if (!user) {
-    return <Login onSuccess={setUser} />;
-  }
 
   return (
     <div className="dashboard">
       <div className="dashboard-header">
         <h1>Internal Efficiency Tools</h1>
         <div className="header-actions">
-          <div className="user-info">
-            <img src={user.picture} alt={user.name} className="user-avatar" />
-            <span className="user-name">{user.name}</span>
-            <button className="btn-logout" onClick={handleLogout}>Logout</button>
-          </div>
           <div className="theme-switch">
             <span className="theme-label">{darkMode ? '🌙' : '☀️'}</span>
             <ToggleSwitch checked={darkMode} onChange={setDarkMode} />
